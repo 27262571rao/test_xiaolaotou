@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        ul{
+            background-color: aquamarine;
+        }
+        li{
+            list-style: none;
+            width: 100px;
+            height:20px;
+            border:1px solid #ff0000;
+            float: left;
+        }
+        li::before {
+          /* //相对于li标签 */
+            position: absolute;
+            /* //必须与before配合使用 */
+            content: "";
+            background: #665e57;
+            /* //往上 */
+            top: -1px;
+            /* //整条线相对于li标签长80% */
+            width: 80%;
+            /* //让左边空出10%,相当于居中了 */
+            left: 10%;
+            height: 1px;
+        }
+    </style>
+</head>
+<body>
+
+    <ul id="ul">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li class="li">4</li>
+    </ul>
+    <div>下面的内容</div>
+    <script>
+    </script>
+</body>
+</html>

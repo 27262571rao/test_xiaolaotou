@@ -1,0 +1,199 @@
+/* 头部样式开始 */
+.header {
+  position: relative;
+  width: 100%;
+  height: 55px;
+  background-color: #fff;
+  color: #fff;
+  font-size: 12px;
+  /* 行高等于高，一行文字崔志居中，行高具有继承性 */
+  line-height: 55px;
+}
+.header-left {
+  float: left;
+  width: 179px;
+  height: 54px;
+  background-color: #cf1132;
+}
+
+.header-right {
+  float: right;
+  width: 139px;
+  height: 54px;
+  background-color: #cf1132;
+  border-left:1px solid #dadada ;
+  color: #333;
+}
+
+/* 头部样式结束 */
+
+/* <!-- 导航开始 --> */
+.fixed {
+  position: fixed;
+}
+.nav {  
+  position: relative;
+  width: 100%;
+  height: 67px;
+  /* 背景图片不平铺，水平居中，垂直居上 */
+  background: url("../image/nav_bg_69230d91.png")  repeat center top;
+}
+/* 水平居中的容器，不设置高度 */
+.wrap {
+  width: 960px;
+  margin: 0 auto;
+}
+.nav li{
+  float: left;
+  width: 120px;
+  height: 66.7px;
+  line-height: 66.7px;  
+}
+.nav a {
+  color: #d4bf9a;   
+}
+
+.nav li:hover >a {
+  color: #fff;   
+}
+
+/* <!-- 导航结束 --> */
+
+
+/* 下拉列表结果 */
+/* 核心思路：
+1、下拉列表绝对定位
+2、合适的父元素相对定位
+3、下拉列表diplay:none隐藏显示
+4、鼠标悬停在相应元素上时下拉列表改为display:block显示
+*/
+.nav-list {
+  /* 下面定位元素的绝对位置，需找到其需要参考的父亲元素，在父元素中设置位
+  置为相对定位， 然后再在本元素中设置相对偏移量，如下的左顶边，顶到父元素
+  的下边框相连  */
+  /* 默认不显示，仅当鼠标悬停在li上时显示， 见下 .nav li:hover>.nav-list */
+  display: none;
+  /* position: absolute; */
+  /* z-index记图显示在上层 */
+  z-index: 111;
+  /* 定位靠左顶边 */
+  left: 0;
+  /* 定位向上顶67像素 */
+  top: 670px;
+  width: 100%;
+  height: 80px; 
+  background-color: #cf1132;
+  /* background: url("../image/bot_head_bg_79b9698b.png") no-repeat center top;   */
+
+}
+/* 默认不显示，仅当鼠标悬停在li上时显示 */
+.nav li:hover .nav-list {
+  /* 显示 */
+  display: block;
+}
+
+.sub-nav-list {
+  display: block;
+  position: relative;
+  left: 0;
+  /* left: 465px; */
+  width: 120px;  
+  top: 0px;  
+  z-index: 100px;
+  background-color:#333; 
+  z-index: 11;
+}
+.nav li:hover .sub-nav-list {
+  
+  display: block;
+
+}
+
+
+.sub-nav-list a{
+  display: block;
+  line-height: 30px;
+}
+
+
+.nav-list2 {
+  display: none;
+  position: relative;
+  width: 120px;
+  /* 高度自动填充 */
+  /* height: 280px; */
+  /* top: 67px; */
+  background-color: #333;  
+  /* z-index记图显示在上层 */
+  z-index: 111;  
+}
+
+/* 默认不显示，仅当鼠标悬停在li上时显示 */
+.nav li:hover .nav-list2 {
+  /* 显示 */
+  display: block;
+  /* z-index: 100; */
+}
+
+
+.nav-list2 a{
+  display: block;
+  line-height: 30px;
+  text-align: center;
+}
+
+/* 下拉列表结束 */
+
+/* banner样式开始 */
+.banner {
+  position: relative;
+  top: 67px;
+  width: 100%;
+  height: 565px;
+  /* background-color:#333; */
+  /* 此处设置块为下沉图层，这样其同级或上级的块如果有下拉框或者弹窗时不会被覆盖 */
+  /* z-index: -1; */
+}
+.banner video{
+  position: absolute;
+  width: 100%;
+  left: 0%; 
+  /* VIDEO画面上部有67PX高的黑框，需隐掉，因此上移，然后下面将图层下沉  */
+  top: -67px;
+  /* z-index: -1; */
+}
+
+.banner img{
+  position: absolute;
+  display: inline-block;  
+  width: 77px;
+  height: 247px;
+  top: 140px;
+  left: 150px;
+  /* background-color: red; */
+  background-size: 100%;
+  /* z-index: 1;     */
+}
+
+.logo{
+  position: absolute;
+  display: block;
+  width: 77px;
+  height: 247px;
+  top: 140px;
+  left: 150px;
+  /* background-color: red; */
+  background-size: 100%;
+  /* z-index: 0; */
+}
+
+.logo a{  
+  position: absolute;
+  display: block;
+  width: 77px;
+  height: 247px;
+  background: url("../image/200.webp") no-repeat;
+  background-size: 100%;
+  /* z-index: 1; */
+}
+/* banner样式结束 */

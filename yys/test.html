@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* .nav-list2 {
+      display: block;
+      position: absolute;
+      width: 120px;
+      height: 280px;
+      top: 67px;
+      line-height: 20px;
+    }
+    .nav-list2 a{
+      display: block;
+    }
+    .nav-list2 img{
+      width:"60";
+      height: "40";
+    } */
+
+    /*  */
+    /* 
+     */
+     /*  */
+    body{
+      padding: 0;
+      margin: 0;
+      /* height: 400px; */
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    ul > li {
+      float:left;
+      /* width: 80px; */
+    }
+
+    ul > li >a{
+      font-size: 30px;
+    }
+
+    .hrNav {
+      position: fixed;
+      display: block;
+    }
+
+    .active {
+      background-color: red;
+    }
+
+    .guangyugongsi {
+      position: fixed;
+      display: block;
+    }
+    .guangyugongsi >a{
+      /* position: fixed; */
+      display: block;
+      margin: 20px;
+      padding: 10px;
+      color: blueviolet;
+    }
+
+    li:hover .guangyugongsi{
+      display: block;
+    }
+
+    .active {
+      background-color: aqua;
+    }
+
+    .phone {
+      display: flex;
+
+    }
+
+  </style>
+</head>
+<body>
+  <!-- <ul class="hrNav">
+    <li><a href="#home">主页</a></li>
+    <li><a href="#home">新闻</a></li>
+    <li><a href="#home">联系</a></li>
+    <li><a href="#home">关于</a></li>
+
+  </ul> -->
+
+    <!-- p{我是第$ $ $ $ $ $ $ $个P段落的内容}*50 -->
+    
+    <div style="width: 20%" class="phone">
+      <div style="width: 5%"><span>|</span></div>
+      <div style="width: 10%"><img src="./images/电话图标.png" alt="" /></div>
+      <div style="width: 85%"><span>400-1166-761</span></div>
+    </div>   
+
+  <div>
+    <ul>
+    <li>
+
+      <!-- <div id="list" -->
+    <a href="">关于公司</a>
+    <div class="guangyugongsi" id="list">
+      <a href="">公司简介</a>
+      <a href="">公司历程</a>
+      <a href="">品牌IP</a>
+      <a href="">公司价值观</a>
+    </div>
+    <script>
+      // var a = $("#list a");
+      // var a = document.querySelectorAll('#list a');
+      // for (var i =0; i<a.length; i++){
+      //   console.log(a[i]);
+      // }
+
+      // for (var i =0; i<a.length; i++){
+      //   a[i].index=i;
+      //   a[i].onclick = function(){
+      //     for (var i=0; i<a.length; i++){
+      //       a[i].className=''
+      //     }
+      //     this.className='active'
+      //   }
+      // }
+
+      
+      // 定义一个函数来设置元素的悬停状态
+      function isHover(element) {
+        let hover = false;
+        // // 鼠标进入元素时设置hover为true
+        // element.addEventListener('mouseenter', () => {
+        //   hover = true;
+        // });
+      
+        // // 鼠标离开元素时设置hover为false
+        // element.addEventListener('mouseleave', () => {
+        //   hover = false;
+        // });
+      
+        // // 返回一个函数，该函数返回当前的hover状态
+        // return function() {
+        //   return hover;
+        // };
+        return hover;
+      }
+      
+      // 使用方法
+      const myElement = document.getElementById('list');
+      const isHovering = isHover(myElement);
+      
+      // 测试元素是否处于悬停状态
+      console.log(isHovering()); // 初始状态
+      myElement.onmouseenter = () => {
+        console.log('Mouse entered');
+        console.log(isHovering()); // 鼠标进入后的状态
+      };
+      myElement.onmouseleave = () => {
+        console.log('Mouse left');
+        console.log(isHovering()); // 鼠标离开后的状态
+      };
+      
+    </script>
+  </li>
+</ul>
+  </div>
+  <!-- <div>
+    <li>
+      <div class="nav-list2">
+        <a href="#">
+          <img src="image/xcx_qr_5944c496.png" alt="" />
+        </a>
+        <a href="#">SP阶式神</a>
+        <a href="#">SSR阶式神</a>              
+        <a href="#">SR阶式神</a>              
+        <a href="#">R阶式神</a>
+      </div>
+    </li>
+  </div> -->
+</body>
+</html>
